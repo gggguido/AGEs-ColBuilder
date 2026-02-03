@@ -64,11 +64,11 @@ gmx mdrun -deffnm fibril_min_solv -v
 
 **Position restraints note (posre_*.itp):**
 
-ColBuilder generates `posre_*.itp` files with a default force constant of **1.0 kcal·mol$^{-1}$·\AA$^{-2}$**. In this workflow, we used different position-restraint force constants at specific stages, so the `posre_*.itp` files were updated accordingly:
+ColBuilder generates `posre_*.itp` files with a default force constant of **1.0 kcal·mol<sup>−1</sup>·Å<sup>−2</sup>**. In this workflow, we used different position-restraint force constants at specific stages, so the `posre_*.itp` files were updated accordingly:
 
-- **A.NVT, 0.5 fs timestep:** 2.5 kcal·mol$^{-1}$·\AA$^{-2}$
+- **A.NVT, 0.5 fs timestep:** 2.5 kcal·mol<sup>−1</sup>·Å<sup>−2</sup>
   - Use `update_posre_2500.py` in `Equilibration/A.NVT/2500/` to update the force constant.
-- **B.NPT, 1 fs and 2 fs timesteps:** 0.3 kcal·mol$^{-1}$·\AA$^{-2}$
+- **B.NPT, 1 fs and 2 fs timesteps:** 0.3 kcal·mol<sup>−1</sup>·Å<sup>−2</sup>
   - Use `update_posre_300.py` in `Equilibration/B.NPT/300/` to update the force constant.
 
 Make sure to adjust the scripts' `EXPECTED_FILES` values to match the number of `posre_*.itp` files in your system.
@@ -81,21 +81,21 @@ mdp locations:
 - `Equilibration/A.NVT/1000/1dt/2nvt.mdp`
 - `Equilibration/A.NVT/1000/2dt/3nvt.mdp`
 
-**A) 0.5 fs timestep, position restraint force constant 2.5 kcal·mol$^{-1}$·\AA$^{-2}$**
+**A) 0.5 fs timestep, position restraint force constant 2.5 kcal·mol<sup>−1</sup>·Å<sup>−2</sup>**
 
 ```bash
 gmx grompp -f nvt.mdp -c fibril_min_solv.gro -r fibril_min_solv.gro -p collagen_fibril_rattus_norvegicus.top -o fibril_nvt.tpr
 gmx mdrun -deffnm fibril_nvt -v -ntmpi 4 -ntomp 5 -nb gpu -bonded gpu -pme gpu -update gpu -pin on -npme 1
 ```
 
-**B) 1.0 fs timestep, position restraint force constant 1.0 kcal·mol$^{-1}$·\AA$^{-2}$**
+**B) 1.0 fs timestep, position restraint force constant 1.0 kcal·mol<sup>−1</sup>·Å<sup>−2</sup>**
 
 ```bash
 gmx grompp -f 2nvt.mdp -c fibril_nvt.gro -r fibril_nvt.gro -p collagen_fibril_rattus_norvegicus.top -t fibril_nvt.cpt -o fibril_nvt.tpr
 gmx mdrun -deffnm fibril_nvt -v -cpi fibril_nvt.cpt -append -ntmpi 4 -ntomp 5 -nb gpu -bonded gpu -pme gpu -update gpu -pin on -npme 1
 ```
 
-**C) 2.0 fs timestep, position restraint force constant 1.0 kcal·mol$^{-1}$·\AA$^{-2}$**
+**C) 2.0 fs timestep, position restraint force constant 1.0 kcal·mol<sup>−1</sup>·Å<sup>−2</sup>**
 
 ```bash
 gmx grompp -f 3nvt.mdp -c fibril_nvt.gro -r fibril_nvt.gro -p collagen_fibril_rattus_norvegicus.top -t fibril_nvt.cpt -o fibril_nvt.tpr
@@ -109,21 +109,21 @@ mdp locations:
 - `Equilibration/B.NPT/300/1dt/2npt.mdp`
 - `Equilibration/B.NPT/300/2dt/3npt.mdp`
 
-**A) 0.5 fs timestep, position restraint force constant 1.0 kcal·mol$^{-1}$·\AA$^{-2}$**
+**A) 0.5 fs timestep, position restraint force constant 1.0 kcal·mol<sup>−1</sup>·Å<sup>−2</sup>**
 
 ```bash
 gmx grompp -f npt.mdp -c fibril_nvt.gro -r fibril_nvt.gro -t fibril_nvt.cpt -p collagen_fibril_rattus_norvegicus.top -o fibril_npt.tpr
 gmx mdrun -deffnm fibril_npt -v -noappend -ntmpi 4 -ntomp 5 -nb gpu -bonded gpu -pme gpu -update gpu -pin on -npme 1
 ```
 
-**B) 1.0 fs timestep, position restraint force constant 0.3 kcal·mol$^{-1}$·\AA$^{-2}$**
+**B) 1.0 fs timestep, position restraint force constant 0.3 kcal·mol<sup>−1</sup>·Å<sup>−2</sup>**
 
 ```bash
 gmx grompp -f 2npt.mdp -c fibril_npt.part0001.gro -r fibril_npt.part0001.gro -t fibril_npt.cpt -p collagen_fibril_rattus_norvegicus.top -o fibril_npt.tpr
 gmx mdrun -deffnm fibril_npt.part0001 -s fibril_npt.tpr -cpi fibril_npt.cpt -ntmpi 4 -ntomp 5 -nb gpu -bonded gpu -pme gpu -update gpu -pin on -npme 1
 ```
 
-**C) 2.0 fs timestep, position restraint force constant 0.3 kcal·mol$^{-1}$·\AA$^{-2}$**
+**C) 2.0 fs timestep, position restraint force constant 0.3 kcal·mol<sup>−1</sup>·Å<sup>−2</sup>**
 
 ```bash
 gmx grompp -f 3npt.mdp -c fibril_npt.part0002.gro -r fibril_npt.part0002.gro -t fibril_npt.part0001.cpt -p collagen_fibril_rattus_norvegicus.top -o fibril_npt.tpr
