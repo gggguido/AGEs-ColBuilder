@@ -2,8 +2,8 @@ title                   = Glucosepane NVT equilibration
 define                  = -DPOSRES  ; position restrain the protein
 ; Run parameters
 integrator              = md        ; leap-frog integrator
-nsteps                  = 6000000   ; 1 ns
-dt                      = 0.001    ; 0.5 fs
+nsteps                  = 6000000   ; 5 ns (cumulative:1ns@0.5fs+4ns@1fs)
+dt                      = 0.001     ; 1.0 fs
 ; Output control
 nstxout                 = 2000       ; save coordinates every 1.0 ps
 nstvout                 = 2000       ; save velocities every 1.0 ps

@@ -77,7 +77,7 @@ pull-ncoords             = 1
 pull-group1-name         = ACE_&_CH3
 pull-group2-name         = NME_&_CH3
 
-pull-coord1-k            = -48735        ; 45 tripelhelices * 3 strands * 120 (0.2 nN in gromacs units) (apparently counts per group)
+pull-coord1-k            = -48735        ; 45 tripelhelices * 3 strands * 361 (0.6 nN in gromacs units) (counts per group)
 pull-coord1-groups       = 1 2
 
 pull-coord1-type         = constant-force

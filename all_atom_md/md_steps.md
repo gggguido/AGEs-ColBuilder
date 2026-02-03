@@ -102,7 +102,7 @@ gmx grompp -f 3nvt.mdp -c fibril_nvt.gro -r fibril_nvt.gro -p collagen_fibril_ra
 gmx mdrun -deffnm fibril_nvt -v -cpi fibril_nvt.cpt -append -ntmpi 4 -ntomp 5 -nb gpu -bonded gpu -pme gpu -update gpu -pin on -npme 1
 ```
 
-### NPT
+### NPT (stepwise timestep and restraints)
 
 mdp locations:
 - `Equilibration/B.NPT/1000/0.5dt/npt.mdp`

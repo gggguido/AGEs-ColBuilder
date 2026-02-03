@@ -3,8 +3,8 @@ define                  = -DPOSRES
 ;
 continuation            = yes
 integrator              = md
-nsteps                  = 1000000 ;(0.5ns@0.5fs)
-dt                      = 0.0005
+nsteps                  = 1000000 ; 0.5ns
+dt                      = 0.0005  ; 0.5 fs
 ;
 nstxout                 = 2000
 nstvout                 = 2000
