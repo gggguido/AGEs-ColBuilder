@@ -1,0 +1,47 @@
+============================================================================
+| ACPYPE: AnteChamber PYthon Parser interfacE v. 2023.10.27 (c) 2024 AWSdS |
+============================================================================
+DEBUG: CLI: -p glucosepane.prmtop -x glucosepane.inpcrd -g
+DEBUG: Python Version 3.12.1 | packaged by conda-forge | (main, Dec 23 2023, 08:05:03) [Clang 16.0.6 ]
+Converting Amber input files to Gromacs ...
+DEBUG: prmtop and inpcrd files loaded
+DEBUG: basename defined = 'MOL'
+DEBUG: getCoords done
+DEBUG: getABCOEFs done
+DEBUG: charge to be balanced: total -0.0000010018
+DEBUG: balanceCharges done
+DEBUG: Balanced TotalCharge 0.0000000000
+DEBUG: PBC = None
+DEBUG: getAtoms done
+DEBUG: getBonds done
+DEBUG: getAngles done
+DEBUG: getDihedrals done
+==> Writing GROMACS files
+
+==> Merging identical lower and uppercase atomtypes in GMX top file.
+
+DEBUG: writing GRO file
+DEBUG: Box size estimated
+DEBUG: writing POSRE file
+DEBUG: atomTypes 16
+DEBUG: GMX atomtypes done
+DEBUG: atoms 80
+DEBUG: GMX atoms done
+DEBUG: bonds 81
+DEBUG: GMX bonds done
+DEBUG: atomPairs 204
+DEBUG: GMX pairs done
+DEBUG: angles 148
+DEBUG: GMX angles done
+DEBUG: setProperDihedralsCoef done
+DEBUG: properDihedralsCoefRB 209
+DEBUG: properDihedralsAlphaGamma 0
+DEBUG: properDihedralsGmx45 268
+==> Writing GMX dihedrals for GMX 4.5 and higher.
+
+DEBUG: GMX special proper dihedrals done
+DEBUG: improperDihedrals 10
+DEBUG: GMX improper dihedrals done
+DEBUG: prmtop and inpcrd files parsed
+Total time of execution: less than a second
+DEBUG: No tmp folder left to be removed

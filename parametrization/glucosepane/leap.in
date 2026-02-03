@@ -1,0 +1,6 @@
+source /opt/anaconda3/envs/AmberTools23/dat/leap/cmd/leaprc.gaff
+loadamberparams /opt/anaconda3/envs/AmberTools23/dat/leap/parm/gaff.dat
+M = loadmol2 glucosepane_resp_gaff.mol2
+mods = loadamberparams glucosepane.frcmod
+saveamberparm M glucosepane.prmtop glucosepane.inpcrd
+quit
