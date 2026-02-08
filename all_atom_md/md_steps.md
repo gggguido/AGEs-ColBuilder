@@ -35,28 +35,32 @@ gmx solvate -cp fibril_box.gro -p collagen_fibril_rattus_norvegicus.top -o fibri
 ```
 
 5. Generate ions input
+- Required mdp file location: `minimization/ions.mdp`
 
 ```bash
-gmx grompp -f ions.mdp -c fibril_solv.gro -p collagen_fibril_rattus_norvegicus.top -o fibril_genion.tpr
+gmx grompp -f minimization/ions.mdp -c fibril_solv.gro -p collagen_fibril_rattus_norvegicus.top -o fibril_genion.tpr
 ```
 
 6. Add ions
+- Output written to: `minimization/ions.gro`
 
 ```bash
-gmx genion -s fibril_genion.tpr -p collagen_fibril_rattus_norvegicus.top -o fibril_ion.gro -conc 0.15 -neutral < SOL
+gmx genion -s fibril_genion.tpr -p collagen_fibril_rattus_norvegicus.top -o minimization/ions.gro -conc 0.15 -neutral < SOL
 ```
 
 7. Vacuum minimization (setup + run)
+- Required mdp file location: `minimization/minim_vacuum.mdp`
 
 ```bash
-gmx grompp -f minim_vacuum.mdp -c fibril_ion.gro -p collagen_fibril_rattus_norvegicus.top -o fibril_min_vacuum.tpr
+gmx grompp -f minimization/minim_vacuum.mdp -c minimization/ions.gro -p collagen_fibril_rattus_norvegicus.top -o fibril_min_vacuum.tpr
 gmx mdrun -deffnm fibril_min_vacuum -v -maxwarn 1
 ```
 
 8. Solvated minimization (setup + run)
+- Required mdp file location: `minimization/minim_solv.mdp`
 
 ```bash
-gmx grompp -f minim_solv.mdp -c fibril_min_vacuum.gro -p collagen_fibril_rattus_norvegicus.top -o fibril_min_solv.tpr
+gmx grompp -f minimization/minim_solv.mdp -c fibril_min_vacuum.gro -p collagen_fibril_rattus_norvegicus.top -o fibril_min_solv.tpr
 gmx mdrun -deffnm fibril_min_solv -v
 ```
 
