@@ -1,3 +1,21 @@
+"""
+Helper
+- Purpose:
+  This script reads a GROMACS index file, splits the `ACE_&_CH3` and `NME_&_CH3`
+  groups into 3-atom chunks, and generates enforced-rotation definitions.
+
+- Inputs:
+  - index file containing groups `ACE_&_CH3` and `NME_&_CH3`
+    (default if omitted: `index_new.ndx`)
+
+- Outputs:
+  - `append.ndx`   (new rotation groups to ndx file: ACE_0, ACE_1, ..., NME_0, NME_1, ...)
+  - `append.mdp`   (enforced-rotation block to append to production mdp)
+
+- Launch:
+  python3 enforced_rotation.py index.ndx
+"""
+
 from pathlib import Path
 import sys
 
