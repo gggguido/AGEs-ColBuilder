@@ -21,7 +21,7 @@ Tools to generate periodic crystal-contact copies of a collagen triple helix and
 - [`generate_crystalcontact_copies.py`](./AGEs_candidate_positions/generate_crystalcontact_copies.py): expands the crystallographic environment (Chimera crystal contacts).
 - [`calculate_dist_CA_CA_lys_arg.py`](./AGEs_candidate_positions/calculate_dist_CA_CA_lys_arg.py): finds **LYS-ARG** candidates (glucosepane and pentosidine).
 - [`calculate_dist_CA_CA_lys_lys.py`](./AGEs_candidate_positions/calculate_dist_CA_CA_lys_lys.py): finds **LYS-LYS** candidates (MOLD).
-- `AGEs_candidate_positions/README.md`: usage details.
+- [`AGEs_candidate_positions/README.md`](./AGEs_candidate_positions/README.md): usage details.
 
 ### [`MODELLER`](./MODELLER/)
 Scripts to generate internal-coordinate (IC) tables for new crosslink residues from SMILES geometry.
@@ -36,20 +36,20 @@ Scripts to generate internal-coordinate (IC) tables for new crosslink residues f
 - ColBuilder modeller library reference file:
   - [`top_heav_mod.lib`](./MODELLER/top_heav_mod.lib)
 - Folder documentation:
-  - `MODELLER/README.md`
+  - [`MODELLER/README.md`](./MODELLER/README.md)
 
 The workflow is general and can be adapted to additional crosslink chemistries beyond the examples included here.
 
 ### [`parametrization`](./parametrization/)
 Detailed example workflow for parametrizing a new crosslink molecule and obtaining an **Amber99-compatible** parameter set.
 
-- `parametrization/README.md`: complete step-by-step commands.
+- [`parametrization/README.md`](./parametrization/README.md): complete step-by-step commands.
 - [`parametrization/glucosepane/`](./parametrization/glucosepane/): generated files for the glucosepane example.
 
 ### [`all_atom_md`](./all_atom_md/)
 Detailed all-atom MD protocol and inputs used after generating collagen fibrils with ColBuilder.
 
-- `all_atom_md/md_steps.md`: complete list of GROMACS commands used in this work.
+- [`all_atom_md/md_steps.md`](./all_atom_md/md_steps.md): complete list of GROMACS commands used in this work.
 - Minimization inputs:
   - [`all_atom_md/minimization/ions.mdp`](./all_atom_md/minimization/ions.mdp)
   - [`all_atom_md/minimization/minim_vacuum.mdp`](./all_atom_md/minimization/minim_vacuum.mdp)
@@ -63,7 +63,7 @@ Detailed all-atom MD protocol and inputs used after generating collagen fibrils 
 ### [`equilibrated_systems`](./equilibrated_systems/)
 Archived equilibrated systems used in this work.
 
-- `equilibrated_systems/README.md`
+- [`equilibrated_systems/README.md`](./equilibrated_systems/README.md)
 - Zipped equilibrated `.gro` systems:
   - [`equilibrated_systems/glucosepane/glucosepane_eq.gro.zip`](./equilibrated_systems/glucosepane/glucosepane_eq.gro.zip)
   - [`equilibrated_systems/pentosidine/pentosidine_eq.gro.zip`](./equilibrated_systems/pentosidine/pentosidine_eq.gro.zip)
@@ -74,7 +74,7 @@ Archived equilibrated systems used in this work.
 ### [`analysis`](./analysis/)
 Post-processing scripts used to analyze fibrils under load.
 
-- `analysis/README.md`: analysis overview and run format.
+- [`analysis/README.md`](./analysis/README.md): analysis overview and run format.
 - Scripts:
   - [`analysis/glucosepane/glucosepane_analysis.py`](./analysis/glucosepane/glucosepane_analysis.py)
   - [`analysis/pentosidine/pentosidine_analysis.py`](./analysis/pentosidine/pentosidine_analysis.py)
@@ -101,9 +101,9 @@ The scripts compute:
 ## Notes
 
 - Each subfolder contains detailed documentation:
-  - `AGEs_candidate_positions/README.md`
-  - `MODELLER/README.md`
-  - `parametrization/README.md`
-  - `all_atom_md/md_steps.md`
-  - `equilibrated_systems/README.md`
-  - `analysis/README.md`
+  - [`AGEs_candidate_positions/README.md`](./AGEs_candidate_positions/README.md)
+  - [`MODELLER/README.md`](./MODELLER/README.md)
+  - [`parametrization/README.md`](./parametrization/README.md)
+  - [`all_atom_md/md_steps.md`](./all_atom_md/md_steps.md)
+  - [`equilibrated_systems/README.md`](./equilibrated_systems/README.md)
+  - [`analysis/README.md`](./analysis/README.md)
