@@ -50,15 +50,31 @@ Detailed example workflow for parametrizing a new crosslink molecule and obtaini
 Detailed all-atom MD protocol and inputs used after generating collagen fibrils with ColBuilder.
 
 - [`all_atom_md/md_steps.md`](./all_atom_md/md_steps.md): complete list of GROMACS commands used in this work.
-- Minimization inputs:
+- Minimization `.mdp` files:
   - [`all_atom_md/minimization/ions.mdp`](./all_atom_md/minimization/ions.mdp)
   - [`all_atom_md/minimization/minim_vacuum.mdp`](./all_atom_md/minimization/minim_vacuum.mdp)
   - [`all_atom_md/minimization/minim_solv.mdp`](./all_atom_md/minimization/minim_solv.mdp)
-- Equilibration helpers:
-  - [`all_atom_md/equilibration/A.NVT/2500/update_posre_2500.py`](./all_atom_md/equilibration/A.NVT/2500/update_posre_2500.py)
-  - [`all_atom_md/equilibration/B.NPT/300/update_posre_300.py`](./all_atom_md/equilibration/B.NPT/300/update_posre_300.py)
-- Production inputs:
-  - [`all_atom_md/production/`](./all_atom_md/production/)
+- Equilibration `.mdp` files:
+  - [`all_atom_md/Equilibration/A.NVT/2500/0.5dt/nvt.mdp`](./all_atom_md/Equilibration/A.NVT/2500/0.5dt/nvt.mdp)
+  - [`all_atom_md/Equilibration/A.NVT/1000/1dt/2nvt.mdp`](./all_atom_md/Equilibration/A.NVT/1000/1dt/2nvt.mdp)
+  - [`all_atom_md/Equilibration/A.NVT/1000/2dt/3nvt.mdp`](./all_atom_md/Equilibration/A.NVT/1000/2dt/3nvt.mdp)
+  - [`all_atom_md/Equilibration/B.NPT/1000/0.5dt/npt.mdp`](./all_atom_md/Equilibration/B.NPT/1000/0.5dt/npt.mdp)
+  - [`all_atom_md/Equilibration/B.NPT/300/1dt/2npt.mdp`](./all_atom_md/Equilibration/B.NPT/300/1dt/2npt.mdp)
+  - [`all_atom_md/Equilibration/B.NPT/300/2dt/3npt.mdp`](./all_atom_md/Equilibration/B.NPT/300/2dt/3npt.mdp)
+- Equilibration helper scripts:
+  - [`all_atom_md/Equilibration/A.NVT/2500/update_posre_2500.py`](./all_atom_md/Equilibration/A.NVT/2500/update_posre_2500.py)
+  - [`all_atom_md/Equilibration/B.NPT/300/update_posre_300.py`](./all_atom_md/Equilibration/B.NPT/300/update_posre_300.py)
+- Production `.mdp` files:
+  - [`all_atom_md/Production/md-pull_step1.mdp`](./all_atom_md/Production/md-pull_step1.mdp)
+  - [`all_atom_md/Production/md-pull_step2.mdp`](./all_atom_md/Production/md-pull_step2.mdp)
+  - [`all_atom_md/Production/md-pull_step3.mdp`](./all_atom_md/Production/md-pull_step3.mdp)
+  - [`all_atom_md/Production/md-pull_step4.mdp`](./all_atom_md/Production/md-pull_step4.mdp)
+  - [`all_atom_md/Production/md-pull_step5.mdp`](./all_atom_md/Production/md-pull_step5.mdp)
+- Other production inputs:
+  - [`all_atom_md/Production/enforced_rotation.py`](./all_atom_md/Production/enforced_rotation.py)
+  - [`all_atom_md/Production/index.ndx.zip`](./all_atom_md/Production/index.ndx.zip)
+
+Note: the `B.NPT/1000/0.5dt` path is intentional. `1000` refers to the restraint-level stage, while `0.5dt` refers to the timestep sub-stage.
 
 ### [`equilibrated_systems`](./equilibrated_systems/)
 Archived equilibrated systems used in this work.
