@@ -2,9 +2,13 @@
 
 This repository collects scripts, inputs, and example systems to help ColBuilder users include and validate new collagen crosslink chemistries that are not yet implemented by default.
 
-## Author
+## Authors
 
-- **Guido Giannetti**
+- Guido Giannetti
+- Justin Pils
+- Frauke Gräter
+- Debora Monego
+- Christoph Dellago
 
 ## Publication
 
@@ -44,7 +48,7 @@ The workflow is general and can be adapted to additional crosslink chemistries b
 Resources for building crosslink parameters and comparing topology files generated with two parametrization schemes.
 
 - [`parametrization/README.md`](./parametrization/README.md): overview of the available parametrization resources.
-- [`parametrization/Antechamber_steps/README.md`](./parametrization/Antechamber_steps/README.md): step-by-step Antechamber workflow. The glucosepane example files are now stored inside this folder.
+- [`parametrization/Antechamber_steps/README.md`](./parametrization/Antechamber_steps/README.md): step-by-step Antechamber workflow. A detailed example for glucosepane parametrization via Antechamber is provided in this folder.
 - [`parametrization/topology_antechamber+Grappa/README.md`](./parametrization/topology_antechamber+Grappa/README.md): topology files for each chemistry using the Antechamber-based and Grappa-based parametrization schemes.
 
 ### [`all_atom_md`](./all_atom_md/)
