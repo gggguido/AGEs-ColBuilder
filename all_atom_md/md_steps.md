@@ -8,6 +8,12 @@ This guide describes how to run MD simulations on collagen microfibrils produced
 - `collagen_fibril_rattus_norvegicus.top`
 - Force field directory: `amber99sb-star-ildnp.ff`
 
+If you want to test the standalone crosslink topologies deposited in this repository, see [`../parametrization/topology_antechamber+Grappa/`](../parametrization/topology_antechamber+Grappa/). For each available chemistry, that folder provides:
+
+- `topol.top` for the Antechamber-based parametrization
+- `grappa_topol.top` for the Grappa-based parametrization
+- `amber99sb-star-ildnp.ff.zip` with the updated Amber99sb*-ildnp force field that includes the extra Antechamber parameters required for MD
+
 ## System Preparation
 
 1. Center and align fibril

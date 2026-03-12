@@ -41,10 +41,11 @@ Scripts to generate internal-coordinate (IC) tables for new crosslink residues f
 The workflow is general and can be adapted to additional crosslink chemistries beyond the examples included here.
 
 ### [`parametrization`](./parametrization/)
-Detailed example workflow for parametrizing a new crosslink molecule and obtaining an **Amber99-compatible** parameter set.
+Resources for building crosslink parameters and comparing topology files generated with two parametrization schemes.
 
-- [`parametrization/README.md`](./parametrization/README.md): complete step-by-step commands.
-- [`parametrization/glucosepane/`](./parametrization/glucosepane/): generated files for the glucosepane example.
+- [`parametrization/README.md`](./parametrization/README.md): overview of the available parametrization resources.
+- [`parametrization/Antechamber_steps/README.md`](./parametrization/Antechamber_steps/README.md): step-by-step Antechamber workflow. The glucosepane example files are now stored inside this folder.
+- [`parametrization/topology_antechamber+Grappa/README.md`](./parametrization/topology_antechamber+Grappa/README.md): topology files for each chemistry using the Antechamber-based and Grappa-based parametrization schemes.
 
 ### [`all_atom_md`](./all_atom_md/)
 Detailed all-atom MD protocol and inputs used after generating collagen fibrils with ColBuilder.
@@ -55,24 +56,24 @@ Detailed all-atom MD protocol and inputs used after generating collagen fibrils 
   - [`all_atom_md/minimization/minim_vacuum.mdp`](./all_atom_md/minimization/minim_vacuum.mdp)
   - [`all_atom_md/minimization/minim_solv.mdp`](./all_atom_md/minimization/minim_solv.mdp)
 - Equilibration `.mdp` files:
-  - [`all_atom_md/Equilibration/A.NVT/2500/0.5dt/nvt.mdp`](./all_atom_md/Equilibration/A.NVT/2500/0.5dt/nvt.mdp)
-  - [`all_atom_md/Equilibration/A.NVT/1000/1dt/2nvt.mdp`](./all_atom_md/Equilibration/A.NVT/1000/1dt/2nvt.mdp)
-  - [`all_atom_md/Equilibration/A.NVT/1000/2dt/3nvt.mdp`](./all_atom_md/Equilibration/A.NVT/1000/2dt/3nvt.mdp)
-  - [`all_atom_md/Equilibration/B.NPT/1000/0.5dt/npt.mdp`](./all_atom_md/Equilibration/B.NPT/1000/0.5dt/npt.mdp)
-  - [`all_atom_md/Equilibration/B.NPT/300/1dt/2npt.mdp`](./all_atom_md/Equilibration/B.NPT/300/1dt/2npt.mdp)
-  - [`all_atom_md/Equilibration/B.NPT/300/2dt/3npt.mdp`](./all_atom_md/Equilibration/B.NPT/300/2dt/3npt.mdp)
+  - [`all_atom_md/equilibration/A.NVT/2500/0.5dt/nvt.mdp`](./all_atom_md/equilibration/A.NVT/2500/0.5dt/nvt.mdp)
+  - [`all_atom_md/equilibration/A.NVT/1000/1dt/2nvt.mdp`](./all_atom_md/equilibration/A.NVT/1000/1dt/2nvt.mdp)
+  - [`all_atom_md/equilibration/A.NVT/1000/2dt/3nvt.mdp`](./all_atom_md/equilibration/A.NVT/1000/2dt/3nvt.mdp)
+  - [`all_atom_md/equilibration/B.NPT/1000/0.5dt/npt.mdp`](./all_atom_md/equilibration/B.NPT/1000/0.5dt/npt.mdp)
+  - [`all_atom_md/equilibration/B.NPT/300/1dt/2npt.mdp`](./all_atom_md/equilibration/B.NPT/300/1dt/2npt.mdp)
+  - [`all_atom_md/equilibration/B.NPT/300/2dt/3npt.mdp`](./all_atom_md/equilibration/B.NPT/300/2dt/3npt.mdp)
 - Equilibration helper scripts:
-  - [`all_atom_md/Equilibration/A.NVT/2500/update_posre_2500.py`](./all_atom_md/Equilibration/A.NVT/2500/update_posre_2500.py)
-  - [`all_atom_md/Equilibration/B.NPT/300/update_posre_300.py`](./all_atom_md/Equilibration/B.NPT/300/update_posre_300.py)
+  - [`all_atom_md/equilibration/A.NVT/2500/update_posre_2500.py`](./all_atom_md/equilibration/A.NVT/2500/update_posre_2500.py)
+  - [`all_atom_md/equilibration/B.NPT/300/update_posre_300.py`](./all_atom_md/equilibration/B.NPT/300/update_posre_300.py)
 - Production `.mdp` files:
-  - [`all_atom_md/Production/md-pull_step1.mdp`](./all_atom_md/Production/md-pull_step1.mdp)
-  - [`all_atom_md/Production/md-pull_step2.mdp`](./all_atom_md/Production/md-pull_step2.mdp)
-  - [`all_atom_md/Production/md-pull_step3.mdp`](./all_atom_md/Production/md-pull_step3.mdp)
-  - [`all_atom_md/Production/md-pull_step4.mdp`](./all_atom_md/Production/md-pull_step4.mdp)
-  - [`all_atom_md/Production/md-pull_step5.mdp`](./all_atom_md/Production/md-pull_step5.mdp)
+  - [`all_atom_md/production/md-pull_step1.mdp`](./all_atom_md/production/md-pull_step1.mdp)
+  - [`all_atom_md/production/md-pull_step2.mdp`](./all_atom_md/production/md-pull_step2.mdp)
+  - [`all_atom_md/production/md-pull_step3.mdp`](./all_atom_md/production/md-pull_step3.mdp)
+  - [`all_atom_md/production/md-pull_step4.mdp`](./all_atom_md/production/md-pull_step4.mdp)
+  - [`all_atom_md/production/md-pull_step5.mdp`](./all_atom_md/production/md-pull_step5.mdp)
 - Other production inputs:
-  - [`all_atom_md/Production/enforced_rotation.py`](./all_atom_md/Production/enforced_rotation.py)
-  - [`all_atom_md/Production/index.ndx.zip`](./all_atom_md/Production/index.ndx.zip)
+  - [`all_atom_md/production/enforced_rotation.py`](./all_atom_md/production/enforced_rotation.py)
+  - [`all_atom_md/production/index.ndx.zip`](./all_atom_md/production/index.ndx.zip)
 
 Note: the `B.NPT/1000/0.5dt` path is intentional. `1000` refers to the restraint-level stage, while `0.5dt` refers to the timestep sub-stage.
 
@@ -120,6 +121,8 @@ The scripts compute:
   - [`AGEs_candidate_positions/README.md`](./AGEs_candidate_positions/README.md)
   - [`MODELLER/README.md`](./MODELLER/README.md)
   - [`parametrization/README.md`](./parametrization/README.md)
+  - [`parametrization/Antechamber_steps/README.md`](./parametrization/Antechamber_steps/README.md)
+  - [`parametrization/topology_antechamber+Grappa/README.md`](./parametrization/topology_antechamber+Grappa/README.md)
   - [`all_atom_md/md_steps.md`](./all_atom_md/md_steps.md)
   - [`equilibrated_systems/README.md`](./equilibrated_systems/README.md)
   - [`analysis/README.md`](./analysis/README.md)
