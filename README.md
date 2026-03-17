@@ -1,10 +1,8 @@
 # AGEs-ColBuilder Extension Repository
 
-This repository accompanies the AGEs extension of ColBuilder for introducing non-enzymatic crosslinks into atomistic collagen fibril models. The corresponding source-code implementation has been merged into the main [ColBuilder](https://github.com/graeter-group/colbuilder) repository; accordingly, the present repository serves as a companion resource collecting the workflows, input files, example systems, and analysis scripts used in this work.
+This repository accompanies the AGEs extension of [ColBuilder](https://github.com/graeter-group/colbuilder) for introducing non-enzymatic crosslinks into atomistic collagen fibril models. The corresponding source-code implementation has been merged into the main ColBuilder repository; the present repository therefore serves as a companion resource containing the workflows and supporting materials used in this study, while also providing a practical framework for introducing additional crosslink chemistries that are not yet available in ColBuilder.
 
-Specifically, this repository provides scripts to identify candidate crosslinking sites in periodic collagen assemblies, utilities and example outputs to generate MODELLER internal-coordinate definitions for additional crosslink chemistries, step-by-step parametrization guides and topology files based on Antechamber and Grappa, GROMACS MD input files and simulation protocols, equilibrated reference systems, and post-processing scripts for trajectory analysis.
-
-The deposited examples cover the AGE crosslinks glucosepane, pentosidine, and MOLD, together with reference PYD and mixed PYD+glucosepane systems used for MD setup and analysis.
+It includes scripts for identifying candidate crosslinking sites in periodic collagen assemblies, utilities and example outputs for generating MODELLER internal-coordinate definitions, parametrization guides and topology files based on Antechamber and Grappa, GROMACS MD protocols and input files, equilibrated reference systems, and post-processing scripts for trajectory analysis. The deposited examples cover the AGE crosslinks glucosepane, pentosidine, and MOLD, together with reference PYD and mixed PYD+glucosepane systems used for MD setup and analysis.
 
 ## Authors
 
