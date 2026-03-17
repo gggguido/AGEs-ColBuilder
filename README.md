@@ -1,6 +1,10 @@
 # AGEs-ColBuilder Extension Repository
 
-This repository collects scripts, inputs, and example systems to help ColBuilder users include and validate new collagen crosslink chemistries that are not yet implemented by default.
+This repository accompanies the AGEs extension of ColBuilder for introducing non-enzymatic crosslinks into atomistic collagen fibril models. The corresponding source-code implementation has been merged into the main [ColBuilder](https://github.com/graeter-group/colbuilder) repository; accordingly, the present repository serves as a companion resource collecting the workflows, input files, example systems, and analysis scripts used in this work.
+
+Specifically, this repository provides scripts to identify candidate crosslinking sites in periodic collagen assemblies, utilities and example outputs to generate MODELLER internal-coordinate definitions for additional crosslink chemistries, step-by-step parametrization guides and topology files based on Antechamber and Grappa, GROMACS MD input files and simulation protocols, equilibrated reference systems, and post-processing scripts for trajectory analysis.
+
+The deposited examples cover the AGE crosslinks glucosepane, pentosidine, and MOLD, together with reference PYD and mixed PYD+glucosepane systems used for MD setup and analysis.
 
 ## Authors
 
@@ -15,8 +19,6 @@ This repository collects scripts, inputs, and example systems to help ColBuilder
 If you use the AGEs extension of ColBuilder, please cite our paper:
 
 [Introducing non-enzymatic crosslinks into atomistic simulations of collagen fibrils](https://doi.org/10.64898/2026.03.13.711566)
-
-Preprint: [bioRxiv](https://www.biorxiv.org/content/10.64898/2026.03.13.711566v1.full.pdf+html)
 
 A BibTeX entry is provided in the [CITATION.bibtex](./CITATION.bibtex) file.
 
