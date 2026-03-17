@@ -10,12 +10,15 @@ This repository collects scripts, inputs, and example systems to help ColBuilder
 - Debora Monego
 - Christoph Dellago
 
-## Publication
+## Publications & Citation
 
-This work is currently in preparation.
+If you use the AGEs extension of ColBuilder, please cite our paper:
 
-- **Citation:** _in preparation_
-- **DOI placeholder:** `DOI: TBA`
+[Introducing non-enzymatic crosslinks into atomistic simulations of collagen fibrils](https://doi.org/10.64898/2026.03.13.711566)
+
+Preprint: [bioRxiv](https://www.biorxiv.org/content/10.64898/2026.03.13.711566v1.full.pdf+html)
+
+A BibTeX entry is provided in the [CITATION.bibtex](./CITATION.bibtex) file.
 
 ## Repository Structure
 
